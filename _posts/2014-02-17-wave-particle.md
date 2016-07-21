@@ -19,9 +19,13 @@ The trouble with such facts is that they're misleading if you don't know what's 
 
 While it achieves its purpose of getting people to think about science, it fails miserably in satisfactorily answering questions. The most common "Because [fancy science term] says so" is escapism and partly incorrect in most cases. So people end up thinking that it's beyond their grasp and forget it. Or worse, brag to friends and write blog posts about their new-found knowledge :P
 
-Before we address this question, let's quickly summarize what we know about "wave-particles" and how light "became" one. 
+Before we address this question, let's quickly summarize the Indian high-school way of getting axiomatically used to the idea of wave-particles. 
 
-deBroglie's equation [^3] made it possible to assign wavelengths to particles and momenta to waves. Why did it make sense? Because it was related to the well revered Quantum Mechanics [^4].
+deBroglie's equation [^3] made it possible to assign wavelengths to particles and momenta to waves. Why did it make sense? Because it was related to the well revered Quantum Mechanics [^4]. Then, there's the photoelectric effect [^5] vs. interference patterns from Young's double slit experiment. The former is explained by light being a particle (called photon), the latter is explained by conventional wave-mechanics of light. TL;DR, _It's a wave... It's a particle... It's a wave-particle!_
+
+Now we have context to address the wave-particle duality. Let's break it down - particles have equations of motions and waves, equations of propagation. In that case, does a wave-particle have both or neither? Upon short-lived rumination, you might arrive at a more fundamental question: do the words motion or propagation even make sense with respect to these wave-particles?
+
+Let's go down another rung in the ladder that is abstraction. We are dangerously close to the realm of non-pragmatic philosophy here. How do we identify something? By its _characteristics_. 
 
 [^1]: If you're ever caught by one, a good way to annoy them is to say "the thing that comes out of a flashlight!" and smirk.
 
@@ -30,3 +34,5 @@ deBroglie's equation [^3] made it possible to assign wavelengths to particles an
 [^3]: $$ \lambda = \frac{h}{p} $$ where $$ \lambda $$ is the deBroglie wavelength, $$ h $$ is the Planck constant and $$ p $$ is the momentum. 
 
 [^4]: In QM, momentum and position are observables and conjugate variables. A well-known result of Fourier analysis is the uncertainty relation $$ \Delta x\Delta y\leq\frac{1}{2} $$ for two conjugate variables $$ x $$ and $$ y $$. This tells us that our measurements of position and momentum must not commute and is an intuitive basis for the commutation relation $$ [x,p]=\iota\hbar $$.
+
+[^5]: shine light on a metal and energy comes out.
