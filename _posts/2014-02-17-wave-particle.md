@@ -12,7 +12,7 @@ For many, this is the stepping stone to the vastly unintuitive Quantum Mechanics
 
 > In experiment X, light is a particle whenever you peek[^2] at it and becomes a wave when you don't!
 >
-> - tragically named Pop-Sci fact
+> -- tragically named Pop-Sci fact
 
 The trouble with such facts is that they're misleading if you don't know what's really going on. This encourages people to ask how light knows to "change" from particle to wave and vice-versa. A more common question is, "In that case, is light **really** a wave or a particle?".
 
