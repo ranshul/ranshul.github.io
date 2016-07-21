@@ -25,7 +25,30 @@ deBroglie's equation [^3] made it possible to assign wavelengths to particles an
 
 Now we have context to address the wave-particle duality. Let's break it down - particles have equations of motions and waves, equations of propagation. In that case, does a wave-particle have both or neither? Upon short-lived rumination, you might arrive at a more fundamental question: do the words motion or propagation even make sense with respect to these wave-particles?
 
-Let's go down another rung in the ladder that is abstraction. We are dangerously close to the realm of non-pragmatic philosophy here. How do we identify something? By its _characteristics_. 
+Let's go down another rung of the ladder that is abstraction. We are dangerously close to the realm of non-pragmatic philosophy here. With that in mind, 
+
+- **How do we identify something?** By its _characteristics_. As the cliched example goes, the presence of leaves can be identified from the rustling sound it makes when the wind blows past it. 
+- **What are we doing when we identify something?** __Classifying__ it with a name - leaf, bazooka, a royale with cheese. 
+
+The same applies for waves and particles. Conventionally, anything with a frequency, wavelength, etc. is called a wave and anything with mass, momentum and so on is called a particle. To humor me, let's invent an entity __thaum__. A __thaum__ can have the following properties:
+
+1. momentum
+2. wavelength
+3. frequency
+4. energy
+
+Let's forget about how we can measure them and what they mean for now and assume they have meaning and can be measured[^6]. So, anything with these 4 properties is a __thaum__. An electron, for instance, has all 4 of these (courtesy of QM) - however, with different meanings for the four properties - and hence, can be classified as a __thaum__. You can probably see where this is going.
+
+So does light, and replace __thaum__ with __wave-particle__ and voila. It's a trivial matter of semantic distinction. Physicists could've called it a million other things, but they chose this. So, we've to live with it. A wave-particle is not part-wave, part-particle - it's a completely different entity. And that, marks the end of the main aim of this article - clearing the wave-particle misnomer. 
+
+### Read on at the risk of being more confused...
+__Disclaimer: physics and math present__
+
+QM says that everything is a wave-particle. [^spoiler] Any entity in a pure particle state would have to be infinitely concentrated at a point and anything with a pure wave state will have infinitely spread out momentum states. The uncertainty principle [^4] helps in understanding this conflict. Moreover, a particle can only be represented as a Kronecker delta function which cannot be normalized. So, it creates a whole host of new problems - the wave-particle picture plays well with the framework of Quantum Mechanics. For more confusion, look up __principle of complementarity__.
+
+**What does the frequency of an electron mean?** In the context of a wave-particle, we have Planck's relation $$ E = hf $$ where $$ E $$ is the energy of the electron, $$ h $$ is the Planck constant and $$ f $$ is the frequency of the electron. So, what is this $$ f $$? It's definitely not easy to measure, because this "electron wave" is in the realm of complex numbers - the thing that oscillates like a wave is a complex number and is called the wavefunction of the electron. The same wavefunction from Schrodinger's equation.
+
+**What does the frequency of a photon mean?** If the photon is massless, there's bound to be something special about it. 
 
 [^1]: If you're ever caught by one, a good way to annoy them is to say "the thing that comes out of a flashlight!" and smirk.
 
@@ -35,4 +58,10 @@ Let's go down another rung in the ladder that is abstraction. We are dangerously
 
 [^4]: In QM, momentum and position are observables and conjugate variables. A well-known result of Fourier analysis is the uncertainty relation $$ \Delta x\Delta y\leq\frac{1}{2} $$ for two conjugate variables $$ x $$ and $$ y $$. This tells us that our measurements of position and momentum must not commute and is an intuitive basis for the commutation relation $$ [x,p]=\iota\hbar $$.
 
-[^5]: shine light on a metal and energy comes out.
+[^5]: Shine light on a metal and energy comes out.
+
+[^6]: It would be very remiss of me if I didn't mention that the phrases "have meaning" and "can be measured" are quite misleading when ascribed to the 4 properties mentioned.
+
+[^spoiler]: Quantum Field Theory says that everything is a field - waves and particles are special states obtained by disturbing it.
+
+*[QM]: Quantum Mechanics
