@@ -13,7 +13,7 @@ For many, this is the stepping stone to the vastly unintuitive Quantum Mechanics
 
 > In experiment X, light is a particle whenever you peek[^2] at it and becomes a wave when you don't!
 >
->				-- tragically named Pop-Sci fact
+>    -- tragically named Pop-Sci fact
 
 The trouble with such facts is that they're misleading if you don't know what's really going on. This encourages people to ask how light knows to "change" from particle to wave and vice-versa. A more common question is, "In that case, is light **really** a wave or a particle?".
 
@@ -29,4 +29,4 @@ deBroglie's equation [^3] made it possible to assign wavelengths to particles an
 
 [^3]: $$ \lambda = \frac{h}{p} $$ where $$ \lambda $$ is the deBroglie wavelength, $$ h $$ is the Planck constant and $$ p $$ is the momentum. 
 
-[^4]: In QM, momentum and position are observables and conjugate variables. A well-known result of Fourier analysis is the uncertainty relation $$ \nabla x\nabla y\leq\frac{1}{2} $$ for two conjugate variables $$ x $$ and $$ y $$. This tells us that our measurements of position and momentum must not commute and is an intuitive basis for the commutation relation $$ \[x,p\]=\iota\hbar $$.
+[^4]: In QM, momentum and position are observables and conjugate variables. A well-known result of Fourier analysis is the uncertainty relation $$ \delta x\delta y\leq\frac{1}{2} $$ for two conjugate variables $$ x $$ and $$ y $$. This tells us that our measurements of position and momentum must not commute and is an intuitive basis for the commutation relation $$ [x,p]=\iota\hbar $$.
