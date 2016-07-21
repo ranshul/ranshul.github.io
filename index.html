@@ -15,7 +15,7 @@ layout: default
 				<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 			</div>
 			<div class="title">
-				<small>{% for cat in post.categories %} <span>{{ cat }},</span>, {% endfor %} </small>
+				<small>{% for cat in post.categories %} <span>{{ cat }}{{#unless @last}},{{/unless}}</span> {% endfor %} </small>
 			</div>
 		</li>
 
