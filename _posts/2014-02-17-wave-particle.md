@@ -48,7 +48,15 @@ QM says that everything is a wave-particle. [^spoiler] Any entity in a pure part
 
 **What does the frequency of an electron mean?** In the context of a wave-particle, we have Planck's relation $$ E = hf $$ where $$ E $$ is the energy of the electron, $$ h $$ is the Planck constant and $$ f $$ is the frequency of the electron. So, what is this $$ f $$? It's definitely not easy to measure, because this "electron wave" is in the realm of complex numbers - the thing that oscillates like a wave is a complex number and is called the wavefunction of the electron. The same wavefunction from Schrodinger's equation.
 
-**What does the frequency of a photon mean?** If the photon is massless, there's bound to be something special about it. 
+**What does the frequency of a photon mean?** With QED in mind, it's slightly easier to explain this. Some context first. The curl of the Maxwell-Faraday equation and time derivative of Ampere's law combined with clever vector identities give us separate wave equations for the electric and magnetic field. The solution to these wave equations can be represented as the sum of normal mode functions by fixing boundary conditions and separation of variables (spatial and time). With some more work, it can be shown that the normal modes are tthe same as that of an equivalent harmonic oscillator. So, an electric field is equivalent to an infinite number of independent harmonic oscillators. When the electromagnetic field is quantized, we replace these harmonic oscillators with their quantum counterparts.
+
+Each quantum harmonic oscillator has a frequency. This can be measured classically when the state is coherent and distinguishable from the ground state. 
+
+TL;DR the quantized electromagnetic field is made of quantum harmonic oscillators with their own frequencies. 
+
+A photon is simply energy added to these oscillators and the classical measurements we get out of the oscillators tip us off about the frequency - the frequency of a photon can be thought of as the frequency of the quantum harmonic oscillator it is added to or taken away from.
+
+That's it for now.
 
 [^1]: If you're ever caught by one, a good way to annoy them is to say "the thing that comes out of a flashlight!" and smirk.
 
@@ -62,6 +70,7 @@ QM says that everything is a wave-particle. [^spoiler] Any entity in a pure part
 
 [^6]: It would be very remiss of me if I didn't mention that the phrases "have meaning" and "can be measured" are quite misleading when ascribed to the 4 properties mentioned.
 
-[^spoiler]: Quantum Field Theory says that everything is a field - waves and particles are special states obtained by disturbing it.
+[^spoiler]: Quantum Field Theory says that everything is a field - particles are special excited states of the quantum field which is a localized wave. 
 
 *[QM]: Quantum Mechanics
+*[QED]: Quantum Electrodynamics
