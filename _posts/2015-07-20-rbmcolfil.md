@@ -1,7 +1,7 @@
 ---
 title:  "Collaborative Filtering With Restricted Boltzmann Machines"
 date:   2015-07-20 22:37:00
-categories: SOP
+categories: ['Recommender Systems']
 primary: RecSys
 ---
 <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>

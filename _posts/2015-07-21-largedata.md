@@ -1,7 +1,7 @@
 ---
 title:  "Large Data - I"
 date:   2015-07-21 22:37:00
-categories: curiosity
+categories: ['Data', 'Pre-MR']
 primary: Data
 ---
 
