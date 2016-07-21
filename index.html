@@ -11,11 +11,11 @@ layout: default
 			<div class="post-date">
 				<span>{{ post.date | date: "%b %d, %Y" }}</span>
 			</div>
-			<div class="post-date">
-				{{ post.primary }}
-			</div>
 			<div class="title">
 				<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+			</div>
+			<div class="post-date">
+				<span>{{ post.primary }}</span>
 			</div>
 		</li>
 
