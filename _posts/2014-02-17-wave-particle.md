@@ -44,7 +44,7 @@ So does light, and replace __thaum__ with __wave-particle__ and voila. It's a tr
 ### Read on at the risk of being more confused...
 __Disclaimer: physics and math present__
 
-QM says that everything is a wave-particle. [^spoiler] Any entity in a pure particle state would have to be infinitely concentrated at a point and anything with a pure wave state will have infinitely spread out momentum states. The uncertainty principle [^4] helps in understanding this conflict. Moreover, a particle can only be represented as a Kronecker delta function which cannot be normalized. So, it creates a whole host of new problems - the wave-particle picture plays well with the framework of Quantum Mechanics. For more confusion, look up __principle of complementarity__.
+QM says that everything is a wave-particle. [spoiler]([^7]) Any entity in a pure particle state would have to be infinitely concentrated at a point and anything with a pure wave state will have infinitely spread out momentum states. The uncertainty principle [^4] helps in understanding this conflict. Moreover, a particle can only be represented as a Kronecker delta function which cannot be normalized. So, it creates a whole host of new problems - the wave-particle picture plays well with the framework of Quantum Mechanics. For more confusion, look up __principle of complementarity__.
 
 **What does the frequency of an electron mean?** In the context of a wave-particle, we have Planck's relation $$ E = hf $$ where $$ E $$ is the energy of the electron, $$ h $$ is the Planck constant and $$ f $$ is the frequency of the electron. So, what is this $$ f $$? It's definitely not easy to measure, because this "electron wave" is in the realm of complex numbers - the thing that oscillates like a wave is a complex number and is called the wavefunction of the electron. The same wavefunction from Schrodinger's equation.
 
@@ -70,7 +70,8 @@ That's it for now.
 
 [^6]: It would be very remiss of me if I didn't mention that the phrases "have meaning" and "can be measured" are quite misleading when ascribed to the 4 properties mentioned.
 
-[^spoiler]: Quantum Field Theory says that everything is a field - particles are special excited states of the quantum field which is a localized wave. 
+[^7]: Quantum Field Theory says that everything is a field - particles are special excited states of the quantum field which is a localized wave. 
 
 *[QM]: Quantum Mechanics
+
 *[QED]: Quantum Electrodynamics
