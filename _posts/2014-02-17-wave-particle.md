@@ -2,6 +2,7 @@
 title:  "Wave-Particle Duality"
 date:   2014-02-17 22:37:00
 categories: physics, wave-particle duality
+primary: Physics
 ---
 __I modified this for my university's [Physics blog](https://physociety.wordpress.com/2014/02/17/its-a-wave-its-a-particle-its-a-wave-particle/)__.
 ## What is light?

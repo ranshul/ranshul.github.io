@@ -2,6 +2,7 @@
 title:  "Large Data - I"
 date:   2015-07-21 22:37:00
 categories: curiosity
+primary: Data
 ---
 
 In the introductory Data Structures and Algorithms course I took, there was a passing mention of a scenario where the data wouldn't fit into primary memory. At that point of time, implementing (read reinventing the wheel) a Red Black Tree and B-Tree from scratch seemed more important. Along with that, I'd taken a course on Database Systems where a million different ideas were thrown at me in detail. For inherently stupid reasons, I never realized how some of those ideas were useful in dealing with large data. This post is to explore those options and hopefully, temper the magnitude of embarrassment that is bound to occur along the way.
