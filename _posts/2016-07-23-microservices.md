@@ -31,7 +31,7 @@ Unless you've dealt with really large codebases, the drawbacks of this simple ap
 
 	1. It affects the entire application - reliability lost
 	2. All the servers will be plagued by the same bug.
-	3. Fix is to redeploy - people won't be able to view the Products the page for a while.
+	3. Fix is to redeploy - people won't be able to view the Products page for a while.
 
 5. In the context of SaaS and cloud, different components may be suited for different types of AWS instances. A monolith forces us to stick with one type of instance.
 
@@ -39,7 +39,7 @@ Unless you've dealt with really large codebases, the drawbacks of this simple ap
 
 Effectively, a big business-critical monolith that's understood well by few to none is a flight risk. And it doesn't play well with agile development or the DevOps culture. Continuous deployment and hotfixes are next to impossible to achieve without downtime. 
 
-There are intricate solutions I've only read about. But we have better solutions at the moment for some usecases.
+There are intricate solutions I've only read about. But we have a better solution at the moment for some usecases.
 
 [^1]: a class performs a highly specific set of functions
 [^2]: dependency between classes is less - a major change in one class should not affect the other
