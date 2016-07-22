@@ -74,3 +74,5 @@ That's it for now.
 *[QM]: Quantum Mechanics
 
 *[QED]: Quantum Electrodynamics
+
+{% include katex_render.html %}
