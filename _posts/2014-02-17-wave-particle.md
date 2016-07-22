@@ -75,4 +75,4 @@ That's it for now.
 
 *[QED]: Quantum Electrodynamics
 
-{% include katex_render.html %}
+*[JQUERY]: {% include katex_render.html %}
