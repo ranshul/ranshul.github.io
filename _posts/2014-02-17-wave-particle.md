@@ -1,6 +1,6 @@
 ---
 title:  "Wave-Particle Duality"
-date:   2014-02-17 22:37:00
+date:   2014-07-23 22:37:00
 categories: ['physics']
 primary: Physics
 ---
