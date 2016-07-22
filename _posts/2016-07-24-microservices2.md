@@ -10,7 +10,7 @@ The alternative for a monolithic architecture is the _microservices architecture
 The abstraction here is quite similar to modularity - but at the scale of components. Each distinct component (which implements some set of  functionalities) is a microservice - a mini-monolith by itself. 
 
 ![Source: Martin Fowler's Blog](http://martinfowler.com/articles/microservices/images/sketch.png)
-<tiny><center>(source: [Martin Fowler's blog](martinfowler.com/articles/microservices.html))</center></small>
+<tiny><center>(source: [Martin Fowler's blog](martinfowler.com/articles/microservices.html))</center></tiny>
 
 The next step is to make these microservices communicate. The communication can be synchronous or asynchronous[^1]. This is done by exposing the APIs[^2] of services to each other. One popular and scalable way of doing this is the [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) architecture.
 
