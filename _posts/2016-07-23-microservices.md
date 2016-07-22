@@ -1,5 +1,5 @@
 ---
-title:  "From OOP to Microservices #1"
+title:  "From OOP to Microservices #1: Fall of the Giant"
 date:   2016-07-23 22:37:00
 categories: ['Software Architecture', 'Microservices', 'Cloud']
 primary: Cloud
