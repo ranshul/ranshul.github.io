@@ -1,5 +1,5 @@
 ---
-title:  "From OOP to Microservices #1: Fall of the Giant"
+title:  "From OOP to Microservices: Part 1"
 date:   2016-07-23 22:37:00
 categories: ['Software Architecture', 'Microservices', 'Cloud']
 primary: Cloud
@@ -28,6 +28,7 @@ Unless you've dealt with really large codebases, the drawbacks of this simple ap
 3. Extremely high startup and deployment time.
 
 4. If there is a memory leak or some bug in say, the Authentication component of Flipkart,
+
 	1. It affects the entire application - reliability lost
 	2. All the servers will be plagued by the same bug.
 	3. Fix is to redeploy - people won't be able to view the Products the page for a while.
@@ -37,6 +38,8 @@ Unless you've dealt with really large codebases, the drawbacks of this simple ap
 6. You can't simply shift to a shiny new language or framework that's tailor-made for one of your components or a new feature.
 
 Effectively, a big business-critical monolith that's understood well by few to none is a flight risk. And it doesn't play well with agile development or the DevOps culture. Continuous deployment and hotfixes are next to impossible to achieve without downtime. 
+
+There are intricate solutions I've only read about. But we have better solutions at the moment for some usecases.
 
 [^1]: a class performs a highly specific set of functions
 [^2]: dependency between classes is less - a major change in one class should not affect the other
