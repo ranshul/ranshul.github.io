@@ -14,7 +14,9 @@ Naturally, the same idea was extended to building websites offering different se
 It's simple to
 
 1. **develop** - IDEs are built for development of monolithic applications.
+
 2. **deploy** - to get the website running, all you have to do is put the gigantic jar file in some server and run it.
+
 3. **scale** (horizontally) - get more servers (AWS or otherwise), put the jar file in all of them and put the servers behind a load balancer[^4]. (then break your head about concurrency issues)
 
 Unless you've dealt with really large codebases, the drawbacks of this simple approach to software development are not apparent. 
@@ -24,11 +26,14 @@ Unless you've dealt with really large codebases, the drawbacks of this simple ap
 2. OOP principles are mostly adhered to. There are some instances where it's just not worth it - results in breakdown of modularity. That decreases quality of code which reduces understandability. So, new modifications and bug fixes will make the code even less modular and you end up in a downward spiral.
 
 3. Extremely high startup and deployment time.
+
 4. If there is a memory leak or some bug in say, the Authentication component of Flipkart,
-	i. It affects the entire application - reliability lost
-	ii. All the servers will be plagued by the same bug.
-	iii. Fix is to redeploy - people won't be able to view the Products the page for a while.
+	1. It affects the entire application - reliability lost
+	2. All the servers will be plagued by the same bug.
+	3. Fix is to redeploy - people won't be able to view the Products the page for a while.
+
 5. In the context of SaaS and cloud, different components may be suited for different types of AWS instances. A monolith forces us to stick with one type of instance.
+
 6. You can't simply shift to a shiny new language or framework that's tailor-made for one of your components or a new feature.
 
 Effectively, a big business-critical monolith that's understood well by few to none is a flight risk. And it doesn't play well with agile development or the DevOps culture. Continuous deployment and hotfixes are next to impossible to achieve without downtime. 
