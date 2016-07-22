@@ -10,7 +10,7 @@ The alternative for a monolithic architecture is the _microservices architecture
 The abstraction here is quite similar to modularity - but at the scale of components. Each distinct component (which implements some set of  functionalities) is a microservice - a mini-monolith by itself. 
 
 ![Source: Martin Fowler's Blog](http://martinfowler.com/articles/microservices/images/sketch.png)
-<small><center><span>(source: [Martin Fowler's blog](martinfowler.com/articles/microservices.html))</span></center></small>
+<tiny><center>(source: [Martin Fowler's blog](martinfowler.com/articles/microservices.html))</center></small>
 
 The next step is to make these microservices communicate. The communication can be synchronous or asynchronous[^1]. This is done by exposing the APIs[^2] of services to each other. One popular and scalable way of doing this is the [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) architecture.
 
@@ -27,7 +27,7 @@ Back to microservices, a popular way of communication is exposing REST endpoints
 Another significant change required is the way the databases and the application interact. For loose coupling, each microservice should have its own database. An added advantage here is that each of these databases can be different - one can be a NoSQL db optimized for a specific purpose and another one could be a traditional MySQL database.
 
 ![Source: Martin Fowler's Blog](http://martinfowler.com/articles/microservices/images/decentralised-data.png)
-<small><center><span>(source: [Martin Fowler's blog](martinfowler.com/articles/microservices.html))</span></center></small>
+<tiny><center>(source: [Martin Fowler's blog](martinfowler.com/articles/microservices.html))</center></tiny>
 
 Like every other architecture, microservices have their own drawbacks. The primary point of concern is the complexity arising from the distributed nature of microservices. [CAP theorem](http://ksat.me/a-plain-english-introduction-to-cap-theorem/) comes into play here. From a developer's perspective, debugging microservices is no easy task. And, the rollout of changes in a set of interdependent microservices has to be carefully planned. 
 
