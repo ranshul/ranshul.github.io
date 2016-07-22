@@ -4,7 +4,6 @@ date:   2014-02-17 22:37:00
 categories: ['physics']
 primary: Physics
 ---
-{% include katex_import.html %} 
 _I'd modified this for my university's [Physics blog](https://physociety.wordpress.com/2014/02/17/its-a-wave-its-a-particle-its-a-wave-particle/)_.
 
 Amateur physics enthusiasts like to question everything. One popular question is "What is light?"[^1]. Especially if they're in school and have just learnt that light is a "wave-particle". Even the mildly disinterested chap is piqued by this. How can something be a wave and particle?
@@ -46,7 +45,7 @@ __Disclaimer: physics and math present__
 
 QM says that everything is a wave-particle.[^7] Any entity in a pure particle state would have to be infinitely concentrated at a point and anything with a pure wave state will have infinitely spread out momentum states. The uncertainty principle [^4] helps in understanding this conflict. Moreover, a particle can only be represented as a Kronecker delta function which cannot be normalized. So, it creates a whole host of new problems - the wave-particle picture plays well with the framework of Quantum Mechanics. For more confusion, look up __principle of complementarity__.
 
-**What does the frequency of an electron mean?** In the context of a wave-particle, we have Planck's relation <div class="equation" data-expr="E = hf"></div> where <div class="equation" data-expr="E"></div> is the energy of the electron, <div class="equation" data-expr="h"></div> is the Planck constant and <div class="equation" data-expr="f"></div> is the frequency of the electron. So, what is this <div class="equation" data-expr="f"></div>? It's definitely not easy to measure, because this "electron wave" is in the realm of complex numbers - the thing that oscillates like a wave is a complex number and is called the wavefunction of the electron. The same wavefunction from Schrodinger's equation.
+**What does the frequency of an electron mean?** In the context of a wave-particle, we have Planck's relation $$ E = hf $$ where $$ E $$ is the energy of the electron, $$ h $$ is the Planck constant and $$ f $$ is the frequency of the electron. So, what is this $$ f $$? It's definitely not easy to measure, because this "electron wave" is in the realm of complex numbers - the thing that oscillates like a wave is a complex number and is called the wavefunction of the electron. The same wavefunction from Schrodinger's equation.
 
 **What does the frequency of a photon mean?** With QED in mind, it's slightly easier to explain this. Some context first. The curl of the Maxwell-Faraday equation and time derivative of Ampere's law combined with clever vector identities give us separate wave equations for the electric and magnetic field. The solution to these wave equations can be represented as the sum of normal mode functions by fixing boundary conditions and separation of variables (spatial and time). With some more work, it can be shown that the normal modes are tthe same as that of an equivalent harmonic oscillator. So, an electric field is equivalent to an infinite number of independent harmonic oscillators. When the electromagnetic field is quantized, we replace these harmonic oscillators with their quantum counterparts.
 
@@ -62,9 +61,9 @@ That's it for now.
 
 [^2]: In QM parlance, whenever you "observe" it
 
-[^3]: <div class="equation" data-expr="\lambda = \frac{h}{p}"></div> where <div class="equation" data-expr="\lambda"></div> is the deBroglie wavelength, <div class="equation" data-expr="h"></div> is the Planck constant and <div class="equation" data-expr="p"></div> is the momentum. 
+[^3]: $$ \lambda = \frac{h}{p} $$ where $$ \lambda $$ is the deBroglie wavelength, $$ h $$ is the Planck constant and $$ p $$ is the momentum. 
 
-[^4]: In QM, momentum and position are observables and conjugate variables. A well-known result of Fourier analysis is the uncertainty relation <div class="equation" data-expr="\Delta x\Delta y\leq\frac{1}{2}"></div> for two conjugate variables <div class="equation" data-expr="x"></div> and <div class="equation" data-expr="y"></div>. This tells us that our measurements of position and momentum must not commute and is an intuitive basis for the commutation relation <div class="equation" data-expr="[x,p]=\iota\hbar"></div>.
+[^4]: In QM, momentum and position are observables and conjugate variables. A well-known result of Fourier analysis is the uncertainty relation $$ \Delta x\Delta y\leq\frac{1}{2} $$ for two conjugate variables $$ x $$ and $$ y $$. This tells us that our measurements of position and momentum must not commute and is an intuitive basis for the commutation relation $$ [x,p]=\iota\hbar $$.
 
 [^5]: Shine light on a metal and energy comes out.
 
@@ -72,7 +71,21 @@ That's it for now.
 
 [^7]: Quantum Field Theory says that everything is a field - particles are special excited states of the quantum field which is a localized wave. 
 
-{% include katex_render.html %}
+$("script[type='math/tex']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<span class=\"inline-equation\">" + 
+           katex.renderToString(tex) +
+           "</span>";
+});
+
+$("script[type='math/tex; mode=display']").replaceWith(
+  function(){
+    var tex = $(this).text();
+    return "<div class=\"equation\">" + 
+           katex.renderToString("\\displaystyle "+tex) +
+           "</div>";
+});
 
 *[QM]: Quantum Mechanics
 
