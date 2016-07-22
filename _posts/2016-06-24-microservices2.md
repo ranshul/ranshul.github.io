@@ -1,6 +1,6 @@
 ---
 title:  "From OOP to Microservices: Part 2"
-date:   2016-07-24 22:37:00
+date:   2016-06-24 22:37:00
 categories: ['Software Architecture', 'Microservices', 'Cloud']
 primary: Cloud
 ---
