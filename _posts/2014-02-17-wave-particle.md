@@ -71,7 +71,9 @@ That's it for now.
 [^6]: It would be very remiss of me if I didn't mention that the phrases "have meaning" and "can be measured" are quite misleading when ascribed to the 4 properties mentioned.
 
 [^7]: Quantum Field Theory says that everything is a field - particles are special excited states of the quantum field which is a localized wave. 
+
 {% include katex_render.html %}
+
 *[QM]: Quantum Mechanics
 
 *[QED]: Quantum Electrodynamics
