@@ -5,7 +5,7 @@ categories: ['Microservices', 'Service Registry', 'Cloud']
 primary: Cloud
 ---
 
-### Microservices - The selfish, spoilt brat you can't ignore
+### Microservices - The selfish, spoilt brats you can't ignore
 
 Microservices are **loosely-coupled** functional units that concern themselves with one primary set of functions. They're independent of other microservices - 
 
