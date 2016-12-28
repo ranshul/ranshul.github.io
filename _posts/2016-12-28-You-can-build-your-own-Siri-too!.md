@@ -112,7 +112,7 @@ Well, how does it fare? This works almost flawlessly with gramatically correct s
 
 Another issue with this approach is parsing nouns like "House of Cards" as three separate words. Consequently, this creates an ambiguity in distinguishing between `<target_object_modifier>` and `<target_object>`. Or worse, transforms the syntax graph into a whole new beast. A hacky fix for this is to make a list of things that must be parsed as proper nouns and force `spacy` to do that. There is an in-built way of doing it. But to keep it open for possibly cleverer hacks in the future, I did this manually.
 
-```
+``` python
 for word in special_words:
 	sentence = re.sub(r'[^"\w](' + unicode(word) + ')',r' "\1"', sentence, flags=re.IGNORECASE)
 
