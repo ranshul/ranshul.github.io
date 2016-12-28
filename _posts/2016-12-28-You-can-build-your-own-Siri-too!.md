@@ -18,7 +18,7 @@ Figuring out the details of the agent is next. What do I want it to do? Control 
 
 _Specification aside_: I'm trying to build two versions. One is to suit a hobby server that may get multiple requests (imagine IoT and the domain gets a few more modules like a toaster[^3]). The other is to make it a part of the accessibility suite. For the latter, I imposed more restrictions on the sentence structure and other language aspects to make it less error-prone. I didn't have to bother about designing it with concurrency constraints and so on. Hereon, I'll solely focus on the hobby version.
 
-### Yeah yeah, how did I go about this?
+Yeah yeah, how did I go about this?
 
 My input would be a natural language sentence. I need to extract the "key ideas" or _features_ from it. Once I have the features, I need to make sense of them and execute the corresponding action. 
 
@@ -28,7 +28,7 @@ Imposing the "closed domain" constraint solves a lot of problems. I divided the 
 
 NLP/Sentence + Classification = LSTMs (a deep learning thing). If you're interested in learning how these work, there are brilliant articles on [LSTMs](http://colah.github.io/posts/2015-08-Understanding-LSTMs/), [RNNs](http://karpathy.github.io/2015/05/21/rnn-effectiveness/), [NLP with Deep Learning](http://colah.github.io/posts/2014-07-NLP-RNNs-Representations/) and [Question Answering](http://benjaminbolte.com/blog/2016/keras-language-modeling.html). This isn't an exhaustive list in anyway. Back to the agent, I experimented with just LSTMs, LSTM with a dropout and a bidirectional LSTM model with dropout. The more complex it sounds, the cooler, right? Surprisingly, it was. 
 
-### Classifying Sentences
+# Classifying Sentences
 
 LSTMs or GRUs are typically used in [sequence to sequence](https://www.tensorflow.org/tutorials/seq2seq/) problems.
 
@@ -77,12 +77,12 @@ Syntax graph: {(rating,pobj): [(imdb,amod), (9,nummod)], (movie,ROOT): [(a,det),
 Classifying...
 what
 
->	a song by kasabian
+>  a song by kasabian
 Syntax graph: {(song,ROOT): [(a,det), (by,prep)], (by,prep): [(kasabian,pobj)]}
 Classifying...
 play
 
->	enlighten me about computer details
+>  enlighten me about computer details
 Syntax graph: {(about,prep): [(details,pobj)], (enlighten,ROOT): [(me,dobj), (about,prep)], (details,pobj): [(computer,compound)]}
 Classifying...
 show
