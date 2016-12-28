@@ -61,12 +61,12 @@ train_X.append(vec_seq)
 
 A `model.fit` seals the deal and it did well considering how bad my training data was! It obviously worked well with vanilla English sentences with clear intent. The slightly weirder ones had a good success rate as well!
 
->  some cpu stats  
->  Syntax graph:  
->  {(stats,ROOT): [(some,det), (cpu,compound)]}  
+``` json
+>  some cpu stats 
+>  Syntax graph: {(stats,ROOT): [(some,det), (cpu,compound)]}  
 >  Classifying...  
 >  show
-
+```
 >  some edm
 >  Syntax graph: 
 >  {(edm,ROOT): [(some,det)]}
