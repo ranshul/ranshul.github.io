@@ -61,35 +61,32 @@ train_X.append(vec_seq)
 
 A `model.fit` seals the deal and it did well considering how bad my training data was! It obviously worked well with vanilla English sentences with clear intent. The slightly weirder ones had a good success rate as well!
 
-``` json
->  some cpu stats 
->  Syntax graph: {(stats,ROOT): [(some,det), (cpu,compound)]}  
->  Classifying...  
->  show
 ```
+>  some cpu stats 
+Syntax graph: {(stats,ROOT): [(some,det), (cpu,compound)]}  
+Classifying...  
+show
+
 >  some edm
->  Syntax graph: 
->  {(edm,ROOT): [(some,det)]}
->  Classifying...
->  play
+Syntax graph: {(edm,ROOT): [(some,det)]}
+Classifying...
+play
 
 >  a good movie with imdb rating 9
->  Syntax graph: 
->  {(rating,pobj): [(imdb,amod), (9,nummod)], (movie,ROOT): [(a,det), (good,amod), (with,prep)], (with,prep): [(rating,pobj)]}
->  Classifying...
->  what
+Syntax graph: {(rating,pobj): [(imdb,amod), (9,nummod)], (movie,ROOT): [(a,det), (good,amod), (with,prep)], (with,prep): [(rating,pobj)]}
+Classifying...
+what
 
->  a song by kasabian
->  Syntax graph: 
->  {(song,ROOT): [(a,det), (by,prep)], (by,prep): [(kasabian,pobj)]}
->  Classifying...
->  play
+>	a song by kasabian
+Syntax graph: {(song,ROOT): [(a,det), (by,prep)], (by,prep): [(kasabian,pobj)]}
+Classifying...
+play
 
->  enlighten me about computer details
->  Syntax graph:
->  {(about,prep): [(details,pobj)], (enlighten,ROOT): [(me,dobj), (about,prep)], (details,pobj): [(computer,compound)]}
->  Classifying...
->  show
+>	enlighten me about computer details
+Syntax graph: {(about,prep): [(details,pobj)], (enlighten,ROOT): [(me,dobj), (about,prep)], (details,pobj): [(computer,compound)]}
+Classifying...
+show
+```
 
 One obvious problem I found is from biased training data. My `play` training data had a lot of occurences of play. So, pretty much every sentence with any word derived from play is classified as `play`. I left the training data untouched and used this to experiment with a feedback module that corrects the classification mistakes. This fixes the problem depending on how well you force the net to learn its mistake.
 
