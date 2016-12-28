@@ -148,7 +148,7 @@ modify
 
 For the sake of completion, I managed to write a few functions to interact with whatsapp on Ubuntu. However, they're quite unstable and aren't a part of this repository. If you have any suggestions, do ping me! Especially if you're cringing at the ugly hacks in the code.
 
-Finally, a shout out to the people who put up with my incredibly stupid questions about basic English and who I brainstormed with!
+Finally, a shout out to the people who put up with my incredibly stupid questions about basic English and those who I brainstormed with!
 
 [^1]: Formally, this is a *closed-domain* problem - in a broad sense, the list of inputs and outputs to the agent are limited
 
