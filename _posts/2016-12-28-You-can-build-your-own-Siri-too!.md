@@ -36,16 +36,14 @@ LSTMs or GRUs are typically used in [sequence to sequence](https://www.tensorflo
 
 Here's the simpler LSTM network in `Keras`.
 
-{% highlight python %}
-
+``` python
 inp = Input(shape=(max_length_of_vector,max_words_in_sentence), dtype='float32')
 lstmn = LSTM(100,dropout_W=0.1,dropout_U=0.1)(inp)
 after_dp = Dropout(0.1)(lstmn)
 output = Dense(number_of_classes, activation='softmax')(after_dp)
 model = Model(input=inp, output=output)
 model.compile('adam','categorical_crossentropy',metrics=['accuracy'])
-
-{% endhighlight % }
+```
 
 Obviously, I can't feed a sentence like `play something by Kasabian` directly to the neural network. Neural networks understand numbers or an array of numbers. Which means the sentence has to be converted to an array of numbers. The most recent memory of doing that involved [gensim's word2vec](https://radimrehurek.com/gensim/models/word2vec.html). Every word is converted to an array of numbers. So, a sentence can become a list of array of numbers. There's the added advantage of "similar" words being closer in the space of those vectors.  
 
@@ -54,13 +52,11 @@ With some preprocessing (make vectors of equal length), I should be able to feed
 Instead of gensim + nltk, I chose [spacy](https://spacy.io/) for doing the NLP heavy-lifting. The model it downloads on first use comes with word vectors. So the sentence to vector code looks like this:
 
 {% highlight python %}
-
 nlp = spacy.load("en")
 doc = nlp(u"sentence")
 for token in doc:
 ​	vec_seq.append(token.vector)
 train_X.append(vec_seq)
-
 {% endhighlight %}
 
 A `model.fit` seals the deal and it did well considering how bad my training data was! It obviously worked well with vanilla English sentences with clear intent. The slightly weirder ones had a good success rate as well!
