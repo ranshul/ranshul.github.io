@@ -1,6 +1,6 @@
 body {
   font-family: 'Freight Text', serif;
-  padding: 10px;
+  padding: 5px;
   margin: 0;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -37,7 +37,7 @@ mark {
 blockquote {
   border-left: 5px solid #ccc;
   margin: 40px 0;
-  padding: 5px 30px;
+  padding: 5px 25px;
   background: #eee;
 }
 span[data-note] {
@@ -183,7 +183,7 @@ iframe {
 }
 ul,
 ol {
-  margin: 10px 0;
+  margin: 25px 0;
   padding-left: 50px;
   li {
     word-wrap: break-word;
@@ -332,6 +332,7 @@ section {
       }
       span {
         display: inline-block;
+	font-size: 0.8em;
         color: #757575;
         letter-spacing: 1px;
         text-transform: uppercase;
