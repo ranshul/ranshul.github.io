@@ -106,7 +106,7 @@ For example, every `modify` sentence needs 3 things: a property to modify, the o
 
 ![syntax graph]({{ site.url }}/assets/agent/eg.png)
 
-This graph is traversed to obtain the object, the property and the value. For each case, the list of edges (`pobj` - object of preposition, `poss` - possessive and so on) are given to the traversal function and it returns the target node. However, determining the sentence structure is slightly tricky. And keep in mind that this graph may not be right all the time. Spacy uses a linear sparse model to achieve an accuracy of 92% while Google's state of the art SyntaxNet achieves an accuracy of 94%. Good enough for our purpose.
+This graph is traversed to obtain the object, the property and the value. For each case, the list of edges (`pobj` - object of preposition, `poss` - possessive and so on) ais given to the traversal function and it returns the target node. However, determining the sentence structure is slightly tricky. And keep in mind that this graph may not be right all the time. Spacy uses a linear sparse model to achieve an accuracy of 92% while Google's state of the art SyntaxNet achieves an accuracy of 94%. Good enough for our purpose.
 
 Well, how does it fare? This works almost flawlessly with gramatically correct sentences (with the right possessive nouns and so on). The feature extractor fails miserably as the sentences become a bunch of nouns with the rare "to" and "of". For example, a command like `set the volume of the VLC window playing House of Cards to 56%` is easy to process. However, processing `set volume vlc playing house of cards 30` turns out to be an absolute disaster for the rule based extractor. Where the line is drawn in terms of supporting horrible English is upto your vanity and curiosity. 
 
@@ -130,7 +130,7 @@ for word in reversed(doc):
             idx = -1
 ```
 
-Extracting complicated relations from these sentences needs more work. And I'm bored of enumerating rules. As of now, I'm trying to distinguish between sentences that this feature extractor can deal with and those that it can't. 
+Extracting complicated relations from these sentences needs more work and I'm bored of enumerating rules. As of now, I'm trying to distinguish between sentences that this feature extractor can deal with and those that it can't. I'll probably try generative models to answer questions about sentences and use that next.
 
 ```
 >  start playing a song by "Arctic Monkeys"
@@ -146,7 +146,9 @@ modify
 {'property': [(volume,dobj)], 'object_modifier': [(playing,acl), ("house of cards",dobj)], 'value': [(%,pobj), (33,nummod)], 'object': [("vlc media player",pobj)]}
 ```
 
-I managed to write a few functions to interact with whatsapp and vlc on Ubuntu. However, they're quite unstable and aren't a part of this repository. 
+For the sake of completion, I managed to write a few functions to interact with whatsapp on Ubuntu. However, they're quite unstable and aren't a part of this repository. If you have any suggestions, do ping me! Especially if you're cringing at the ugly hacks in the code.
+
+Finally, a shout out who put up with my incredibly stupid questions about basic English and the people to whom I brainstormed with!
 
 [^1]: Formally, this is a *closed-domain* problem - in a broad sense, the list of inputs and outputs to the agent are limited
 
