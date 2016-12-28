@@ -88,7 +88,25 @@ Classifying...
 show
 ```
 
-One obvious problem I found is from biased training data. My `play` training data had a lot of occurences of play. So, pretty much every sentence with any word derived from play is classified as `play`. I left the training data untouched and used this to experiment with a feedback module that corrects the classification mistakes. This fixes the problem depending on how well you force the net to learn its mistake.
+One obvious problem I found is from biased training data. My `play` training data had a lot of occurences of play. So, pretty much every sentence with any word derived from play is classified as `play`. I left the training data untouched and used this to experiment with a feedback module that corrects the classification mistakes. This fixes the problem depending on how well/often you force the net to learn its mistake.
+
+# Extracting the Feature
+
+I chose to opt for a rule or pattern based feature extractor here. I listed down a few ways in which a class of commands can be given. 
+
+```
+<verb> <target_object_modifier>'s <target_object>'s <object_property> <preposition> <value>
+<verb> <target_object_modifier>'s <target_object> <object_property> <preposition> <value>
+<verb> <object_property> <preposition> (of) <target_object_modifier>'s <target_object> <preposition> <value>
+<verb> <object_property> <preposition> (of) <target_object> <target_object_modifier>`   
+
+```
+
+For example, any `modify` type sentence needs 3 things: a property to modify, the object which has that property and the value the property should be modified to. And these are a few simple ways of saying it. `spacy` generates a dependency tree from a sentence. For convenience, I created duplicated it as a graph with a simple depth first search. These syntax graphs can be visualized here (displacy)[https://demos.explosion.ai/displacy/?text=set%20the%20volume%20of%20the%20VLC%20Player%20to%2056%25&model=en&cpu=1&cph=0].
+![syntax graph]({{ site.url }}/assets/agent/eg.png)
+
+
+ This works very well with gramatically correct sentences (with the right possessive nouns and so on). The feature extractor fails miserably as the sentences become a bunch of nouns with the rare "to" and "of". For example, a command like `set the volume of the VLC window playing House of Cards to 56%` is easy to process. However, processing `set volume vlc playing house of cards 30` turns out to be an absolute disaster for the rule based extractor. Practically, there aren't many ways in which a sentence is input. 
 
 [^1]: Formally, this is a *closed-domain* problem - in a broad sense, the list of inputs and outputs to the agent are limited
 
