@@ -130,7 +130,7 @@ for word in reversed(doc):
             idx = -1
 ```
 
-Extracting complicated relations from these sentences needs more work and I'm bored of enumerating rules. As of now, I'm trying to distinguish between sentences that this feature extractor can deal with and those that it can't. I'll probably try generative models to answer questions about sentences and use that next.
+The next step is to construct a knowledge graph with which we can provide context between sentences. And for that, we need an extractor capable of extracting complicated relations from these sentences. This needs more work and I'm bored of enumerating rules. As of now, I'm trying to distinguish between sentences that this feature extractor can deal with and those that it can't. I'll probably try generative models to answer questions about sentences and use that next.
 
 ```
 >  start playing a song by "Arctic Monkeys"
