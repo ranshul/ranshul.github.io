@@ -45,7 +45,7 @@ output = Dense(number_of_classes, activation='softmax')(after_dp)
 model = Model(input=inp, output=output)
 model.compile('adam','categorical_crossentropy',metrics=['accuracy'])
 
-{% endhighlight% }
+{% endhighlight % }
 
 Obviously, I can't feed a sentence like `play something by Kasabian` directly to the neural network. Neural networks understand numbers or an array of numbers. Which means the sentence has to be converted to an array of numbers. The most recent memory of doing that involved [gensim's word2vec](https://radimrehurek.com/gensim/models/word2vec.html). Every word is converted to an array of numbers. So, a sentence can become a list of array of numbers. There's the added advantage of "similar" words being closer in the space of those vectors.  
 
