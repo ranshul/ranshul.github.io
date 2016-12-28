@@ -102,11 +102,51 @@ I chose to opt for a rule or pattern based feature extractor here. I listed down
 
 ```
 
-For example, any `modify` type sentence needs 3 things: a property to modify, the object which has that property and the value the property should be modified to. And these are a few simple ways of saying it. `spacy` generates a dependency tree from a sentence. For convenience, I created duplicated it as a graph with a simple depth first search. These syntax graphs can be visualized here [displacy](https://demos.explosion.ai/displacy/?text=set%20the%20volume%20of%20the%20VLC%20Player%20to%2056%25&model=en&cpu=1&cph=0).
+For example, every `modify` sentence needs 3 things: a property to modify, the object that possesses this property and the target value to be assigned to the property. And these are a few simple ways of saying it. `spacy` generates a dependency tree from a sentence. For convenience, I created duplicated it as a graph with a simple depth first search. These syntax graphs can be visualized here [displacy](https://demos.explosion.ai/displacy/?text=set%20the%20volume%20of%20the%20VLC%20Player%20to%2056%25&model=en&cpu=1&cph=0).
 
 ![syntax graph]({{ site.url }}/assets/agent/eg.png)
 
- This works very well with gramatically correct sentences (with the right possessive nouns and so on). The feature extractor fails miserably as the sentences become a bunch of nouns with the rare "to" and "of". For example, a command like `set the volume of the VLC window playing House of Cards to 56%` is easy to process. However, processing `set volume vlc playing house of cards 30` turns out to be an absolute disaster for the rule based extractor. Practically, there aren't many ways in which a sentence is input. 
+This graph is traversed to obtain the object, the property and the value. For each case, the list of edges (`pobj` - object of preposition, `poss` - possessive and so on) are given to the traversal function and it returns the target node. However, determining the sentence structure is slightly tricky. And keep in mind that this graph may not be right all the time. Spacy uses a linear sparse model to achieve an accuracy of 92% while Google's state of the art SyntaxNet achieves an accuracy of 94%. Good enough for our purpose.
+
+ Well, how does it fare? This works almost flawlessly with gramatically correct sentences (with the right possessive nouns and so on). The feature extractor fails miserably as the sentences become a bunch of nouns with the rare "to" and "of". For example, a command like `set the volume of the VLC window playing House of Cards to 56%` is easy to process. However, processing `set volume vlc playing house of cards 30` turns out to be an absolute disaster for the rule based extractor. Where the line is drawn in terms of supporting horrible English is upto your vanity and curiosity. 
+
+ Another issue with this approach is parsing nouns like "House of Cards" as three separate words. Consequently, this creates an ambiguity in distinguishing between `<target_object_modifier>` and `<target_object>`. Or worse, transforms the syntax graph into a whole new beast. A hacky fix for this is to make a list of things that must be parsed as proper nouns and force `spacy` to do that. There is an in-built way of doing it. But to keep it open for possibly cleverer hacks in the future, I did this manually.
+
+ ``` python
+for word in special_words:
+	sentence = re.sub(r'[^"\w](' + unicode(word) + ')',r' "\1"', sentence, flags=re.IGNORECASE)
+
+# merge things within double quotes into a single proper noun token.
+doc = nlp(sentence)
+idx = -1
+#doc.merge() affects the for loop - so reversed
+for word in reversed(doc):
+    if word.text == '"':
+        if idx == -1:
+            idx = word.idx
+        else:
+            tok = doc.merge(word.idx,idx+1) #convert that into one token
+            tok.tag_ = "NNP" #make it a proper noun
+            idx = -1
+ ```
+
+Extracting complicated relations from these sentences needs more work. And I'm bored of enumerating rules. As of now, I'm trying to distinguish between sentences that this feature extractor can deal with and those that it can't. 
+
+```
+>  start playing a song by "Arctic Monkeys"
+play
+{'action': u'start', 'target_media_by': [("Arctic Monkeys",pobj)], 'target_media': [(song,dobj)], 'target_application': []}
+
+>  play something by lamb of god in vlc
+play
+{'action': 'start', 'target_media_by': [("lamb of god",pobj)], 'target_media': [(something,dobj)], 'target_application': [("vlc",pobj)]}
+
+>  set the volume of vlc media player playing house of cards to 33%
+modify
+{'property': [(volume,dobj)], 'object_modifier': [(playing,acl), ("house of cards",dobj)], 'value': [(%,pobj), (33,nummod)], 'object': [("vlc media player",pobj)]}
+```
+
+I managed to write a few functions to interact with whatsapp and vlc on Ubuntu. However, they're quite unstable and aren't a part of this repository. 
 
 [^1]: Formally, this is a *closed-domain* problem - in a broad sense, the list of inputs and outputs to the agent are limited
 
