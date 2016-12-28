@@ -116,17 +116,17 @@ This graph is traversed to obtain the object, the property and the value. For ea
 for word in special_words:
 	sentence = re.sub(r'[^"\w](' + unicode(word) + ')',r' "\1"', sentence, flags=re.IGNORECASE)
 
-# merge things within double quotes into a single proper noun token.
+''' merge things within double quotes into a single proper noun token. '''
 doc = nlp(sentence)
 idx = -1
-#doc.merge() affects the for loop - so reversed
+''' doc.merge() affects the for loop - so reversed '''
 for word in reversed(doc):
     if word.text == '"':
         if idx == -1:
             idx = word.idx
         else:
-            tok = doc.merge(word.idx,idx+1) #convert that into one token
-            tok.tag_ = "NNP" #make it a proper noun
+            tok = doc.merge(word.idx,idx+1) //convert that into one token
+            tok.tag_ = "NNP" //make it a proper noun
             idx = -1
  ```
 
