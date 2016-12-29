@@ -5,6 +5,8 @@ categories: ['NLP', 'AI', 'Deep Learning']
 primary: NLP
 ---
 
+_the github repo for the code is [here](https://github.com/ranshul/terminal-agent)_.
+
 is what clickbait would look like :P Surprisingly, even without access to private data and code from the likes of Google and Facebook, it's the semi-truth. If you're looking for something that works out of the box, head to the Google-acquired [api.ai](https://api.ai/). 
 
 Figuring out the domain of the problem is quite challenging. My aim was to build something that controlled applications and did some menial tasks from the command line. In a week, at most. [^1] Now, why would I want to do it when I can set up an _alias_ or put something in `.bashrc`? Or you know, when I can simply use my mouse and keyboard. 
