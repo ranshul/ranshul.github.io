@@ -187,6 +187,7 @@ iframe {
 ul,
 ol {
   margin: 25px 0;
+  line-height: 1.2 em;
   padding-left: 50px;
   li {
     word-wrap: break-word;
@@ -278,7 +279,7 @@ article {
   }
   p {
     font-size: 17px;
-    line-height: 1.5em;
+    line-height: 1.1em;
     word-wrap: break-word;
   }
   .footnote {
@@ -316,6 +317,7 @@ section {
     padding: 0;
     li {
       margin: 25px 0;
+      line-height: 1.1 em;
       .title {
         max-width: 100%;
         overflow: hidden !important;
