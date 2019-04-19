@@ -14,7 +14,7 @@ $$ \begin{center} 1, 3, 5, 7, 9, \cdots \\ 2, 4, 6, 8, 10, \cdots \end{center}$$
 If the first line is $$ \{o_i \in \textrm{Odd}\} $$ and the second line is $$ \{e_i \in \textrm{Even}\} $$, then $$ e_i=o_i + 1 $$ by inspection. Intuitively, it can be concluded that the number of odd and even numbers (though infinity) are the same. To prove this formally, the Schröder–Bernstein theorem[^1] is used.
 
 A quick next step would be to use the bijection $$ f: \textrm{Odd}\to\mathbb{N} = \dfrac{o_i + 1}{2} $$. Now, we have proved that the numer of odd numbers and the number of all natural numbers, that is, $$ |\mathrm{Odd}|=|\mathbb{N}| $$. We also know the following:
-1. $$ |\textrm{Odd}|=|\textrm{Even}| $$
+1. $$ \|\textrm{Odd}\|=\|\textrm{Even}\| $$
 2. $$ \textrm{Odd}\cup\textrm{Even}=\mathbb{N} $$
 3.  $$ \textrm{Odd}\cap\textrm{Even}=\emptyset $$
 
@@ -39,7 +39,7 @@ sets that have a bijection with the set of natural numbers are said to be *count
 
 Now, we can use the measure to "size up" a set. These countable sets can be thought of as "discrete" sets. The set of rational numbers $$\mathbb{Q}$$ can be mapped to $$\mathbb{N}$$ as well. 
 
-The set of real numbers are _uncountable_. Cantor proved it by showing that it's impossible to enumerate all the real numbers in the interval $$[0,1]$$. This makes the cardinality of $$[0,1]$$ an uncountable infinity $$ (2^{|\mathbb{N}|}) $$. Since the interval can be mapped to $$ \mathbb{R} $$, the cardinalities are same. Note that the measures are different. As encountered earlier, for 1D intervals, the measure is the difference in the endpoints.
+The set of real numbers are _uncountable_. Cantor proved it by showing that it's impossible to enumerate all the real numbers in the interval $$[0,1]$$. This makes the cardinality of $$[0,1]$$ an uncountable infinity $$ (2^{\| \mathbb{N} \|}) $$. Since the interval can be mapped to $$ \mathbb{R} $$, the cardinalities are same. Note that the measures are different. As encountered earlier, for 1D intervals, the measure is the difference in the endpoints.
 
 
 
