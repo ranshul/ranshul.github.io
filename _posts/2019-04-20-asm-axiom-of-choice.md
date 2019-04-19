@@ -9,7 +9,7 @@ Take all the natural numbers and list them down:
 $$ 1, 2, 3, 4, 5, 6, \cdots $$
 
 Now divide them into two lines - odd and even numbers.
-$$ 1, 3, 5, 7, 9, \cdots \\ \,\, 2, 4, 6, 8, 10, \cdots $$
+$$ \begin{aligned} 1, 3, 5, 7, 9, \cdots \\ 2, 4, 6, 8, 10, \cdots \end{aligned}$$
 
 If the first line is $$ \{o_i \in \textrm{Odd}\} $$ and the second line is $$ \{e_i \in \textrm{Even}\} $$, then $$ e_i=o_i + 1 $$ by inspection. Intuitively, it can be concluded that the number of odd and even numbers (though infinity) are the same. To prove this formally, the Schröder–Bernstein theorem[^1] is used.
 
