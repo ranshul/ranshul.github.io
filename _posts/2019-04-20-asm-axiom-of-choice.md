@@ -1,7 +1,7 @@
 ---
-title:  "Axiom of Choice"
+title:  "[WIP] Axiom of Choice"
 date:   2019-04-20 00:19:00
-categories: ['foundations']
+categories: ['foundations', 'draft']
 primary: Foundations
 ---
 
