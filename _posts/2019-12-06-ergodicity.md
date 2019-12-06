@@ -13,9 +13,10 @@ _So, why does it work?_ Well, an accurate justification of this interpretation o
 
 In Birkhoff's distilled form, $$ f $$ is ergodic if 
 
-$$ \lim_{T\to\infty}\dfrac{1}{T}\int_{0}^{T} f(x(t))\mathrm{d}t = \int \rho (x)f(x)\mathrm{d}x $$
 
-, that is, time and space averages must be the same almost everywhere. The measure theoretic technicalities, along with others that plague Ergodic theory, will not be discussed here. The time average here is as $$ t \rightarrow \infty $$. 
+<p align="center"> $$ \lim_{T\to\infty}\dfrac{1}{T}\int_{0}^{T} f(x(t))\mathrm{d}t = \int \rho (x)f(x)\mathrm{d}x $$ </p>
+
+That is, time and space averages must be the same almost everywhere. The measure theoretic technicalities, along with others that plague Ergodic theory, will not be discussed here. The time average here is as $$ t \rightarrow \infty $$. 
 
 It's not obvious that experimentally measured observable is this same time average. In fact, it simply isn't true always. A simple spin system of 1000 particles can force even the most efficient physical process to traverse all states within the universe's predicted lifetime. This gets us to Landau/Lifshitz's statistical independence argument (with the sum functions being approximately constant over the energy hypersurface).
 
