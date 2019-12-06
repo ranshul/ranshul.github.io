@@ -13,7 +13,7 @@ _So, why does it work?_ Well, an accurate justification of this interpretation o
 
 In Birkhoff's distilled form, $$ f $$ is ergodic if 
 
-$$ \begin{equation*} \lim_{T\to\infty}\dfrac{1}{T}\int_{0}^{T} f(x(t))\mathrm{d}t = \int \rho(x)f(x)\mathrm{d}x \end{equation*} $$
+$$ \lim_{T\to\infty}\dfrac{1}{T}\int_{0}^{T} f(x(t))\mathrm{d}t = \int \rho (x)f(x)\mathrm{d}x $$
 
 , that is, time and space averages must be the same almost everywhere. The measure theoretic technicalities, along with others that plague Ergodic theory, will not be discussed here. The time average here is as $$ t \rightarrow \infty $$. 
 
