@@ -33,6 +33,8 @@ If $$ r_1 $$ occurs $$ n_1 $$ times and $$ r_2 $$ occurs $$ n_2 $$ times[^3], fo
 <center>$$ \left\langle r \right\rangle_\tau = \lim_{T\to\infty}\left(\dfrac{x(t+T\delta t)}{x(t)}\right)^{\frac{1}{T}} = r_{1}^{n_1}r_{2}^{n_2}$$ </center>
 In our particular example, the time average is $$ 1 $$ which indicates that over time, the process does not add any money.
 
+While my notation is probably off, the first "expectation value" gets the name large-ensemble limit in economics. The second one is the long-time limit. Both these averages are two different pieces of information. It is upto the modeller to choose what's required where.
+
 [^1]: This implicitly introduces the frequency of occurence or a temporal aspect of X taking a value.
 [^2]: "Zooming out" of the curve enough for one process to filter out the noise and get the trend.
 [^3]: Here, $$ n_1 + n_2 = T $$
