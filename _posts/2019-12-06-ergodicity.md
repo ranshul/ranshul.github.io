@@ -5,7 +5,7 @@ categories: ['foundations', 'draft']
 primary: Foundations
 ---
 
-Probaility is tricky. The ideas built on top of it serve as good mental fodder. However, with "intuition" and working backwards from observations, we might not be able to completely explain why (or whether) our probabilistic models work. The historic evolution of jargon doesn't help a bit either. 
+Probability is tricky. The ideas built on top of it serve as good mental fodder. However, with "intuition" and working backwards from observations, we might not be able to completely explain why (or whether) our probabilistic models work. The historic evolution of jargon doesn't help a bit either. 
 
 One of the remarkable successes of probabilistic modelling is in the field of statistical mechanics. In typical experiments, a thermodynamic observable is measured; the computed ensemble average is then compared against it. This methodology has worked so far. So, why does it work? Well, an accurate justification of this interpretation of thermodynamics eludes us to this date. A point of contention here is the idea of comparing the statistical ensemble average with the experimental measurement (often considered to be the time average). The dichotomy here is ergodicity. 
 
