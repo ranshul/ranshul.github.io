@@ -4,7 +4,7 @@ date:   2019-12-06 00:19:00
 categories: ['foundations', 'draft']
 primary: Foundations
 ---
-
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
 Probability is tricky. The ideas built on top of it serve as good mental fodder. However, with "intuition" and working backwards from observations, we might not be able to completely explain why (or whether) our probabilistic models work. The historic evolution of jargon doesn't help a bit either. 
 
 One of the remarkable successes of probabilistic modelling is in the field of statistical mechanics. In typical experiments, a thermodynamic observable is measured; the computed ensemble average is then compared against it. This methodology has worked so far. 
@@ -14,7 +14,7 @@ _So, why does it work?_ Well, an accurate justification of this interpretation o
 In Birkhoff's distilled form, $$ f $$ is ergodic if 
 
 
-<p align="center"> $$ \lim_{T\to\infty}\dfrac{1}{T}\int_{0}^{T} f(x(t))\mathrm{d}t = \int \rho (x)f(x)\mathrm{d}x $$ </p>
+<center> $$ \lim_{T\to\infty}\dfrac{1}{T}\int_{0}^{T} f(x(t))\mathrm{d}t = \int \rho (x)f(x)\mathrm{d}x $$ </center>
 
 That is, time and space averages must be the same almost everywhere. The measure theoretic technicalities, along with others that plague Ergodic theory, will not be discussed here. The time average here is as $$ t \rightarrow \infty $$. 
 
