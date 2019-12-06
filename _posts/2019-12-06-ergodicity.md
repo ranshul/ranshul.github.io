@@ -18,9 +18,10 @@ That is, time and space averages must be the same almost everywhere. The measure
 
 It's not obvious that experimentally measured observable is this same time average. In fact, it simply isn't true always. A simple spin system of 1000 particles can force even the most efficient physical process to traverse all states within the universe's predicted lifetime. This gets us to Landau/Lifshitz's statistical independence argument (with the sum functions being approximately constant over the energy hypersurface). However, I digress.
 
-In economics, some of these ideas have been borrowed. The classic wealth from gambling example demonstrates this difference. It goes as follows: The money you have is $$ m(t) $$ for time $$ t $$. For each timestep $\delta t$, your money either doubles or halves with equal probabilities. Call this multiplicative factor 
+In economics, some of these ideas have been borrowed. The classic wealth from gambling example demonstrates this difference. It goes as follows: The money you have is $$ m(t) $$ for time $$ t $$. For each timestep $$ \delta t $$, your money either doubles or halves with equal probability. Call this multiplicative factor 
 <center>$$ r(t) = \begin{cases} 2, \text{with probability } \frac{1}{2} \\ \frac{1}{2}, \text{with probability } \frac{1}{2} \end{cases}$$ </center>
-This scenario can be modelled as $$ m(t) = r(t)m(t-\delta t) $$. This can be deparameterized on time by taking the ensemble average: $$ \left\langle x(t + T\delta t)\right\rangle = x(t) \left\langle r \right\rangle^{T} $$. Here, $$ \left\langle r \right\rangle = 2 \times 0.5 + 0.5 \times 0.5 = 1.25 $$
+This scenario can be modelled as $$ m(t) = r(t)m(t-\delta t) $$. This can be deparameterized on time by taking the ensemble average: $$ \left\langle x(t + T\delta t)\right\rangle = x(t) \left\langle r \right\rangle^{T} $$. Here, $$ \left\langle r \right\rangle = 2 \times 0.5 + 0.5 \times 0.5 = 1.25 $$ The expectation value (or ensemble average) says that, on the long run, the money in hand increases. Here's the caveat.
 
-A random variable $$ X $$ **need not** take the value _expectation value_ $$ E[X] $$ or $$ \left\langle X \right\rangle $$ often[^2].
+> A random variable $$ X $$ **need not** take the value _expectation value_ $$ E[X] $$ or $$ \left\langle X \right\rangle $$ often[^1].
 
+[^1]: This implicitly introduces the frequency of occurence or a temporal aspect of X taking a value.
