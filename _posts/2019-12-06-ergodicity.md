@@ -24,4 +24,15 @@ This scenario can be modelled as $$ m(t) = r(t)m(t-\delta t) $$. This can be dep
 
 > A random variable $$ X $$ **need not** take the value _expectation value_ $$ E[X] $$ or $$ \left\langle X \right\rangle $$ often[^1].
 
+The term expectation value, or mathematical expectation, is an unfortunate misnomer. Its [history](https://en.wikipedia.org/wiki/Expected_value#Etymology) explains the meaning succinctly. 
+> If you expect $$ a $$ or $$ b $$, then your expectation value is $$ \dfrac{a+b}{2} $$. However, you would still get either $$ a $$ or $$ b $$.
+
+The other deparameterization is by taking the time average[^2]. Generalizing the multiplicative factor, or the reward, we can have 
+<center>$$ r(t) = \begin{cases} r_1, \text{with probability } p \\ r_2, \text{with probability } 1-p \end{cases}$$ </center>
+If it is $$ r_1 $$ $$ n_1 $$ times and $$ r_2 $$ $$ n_2 $$ times[^3], for $$ T $$ timesteps,
+<center>$$ \left\langle r \right\rangle_\tau = \lim_{T\to\infty}\left(\dfrac{x(t+T\delta t)}{x(t)}\right)^{\frac{1}{T}} = r_{1}^{n_1}r_{2}^{n_2}$$ </center>
+In our particular example, the time average is $$ 1 $$ which indicates that over time, the process does not add any money.
+
 [^1]: This implicitly introduces the frequency of occurence or a temporal aspect of X taking a value.
+[^2]: "Zooming out" of the curve enough for one process to filter out the noise and get the trend.
+[^3]: $$ n_1 + n_2 = T $$
