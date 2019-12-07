@@ -34,7 +34,7 @@ If $$ r_1 $$ occurs $$ n_1 $$ times and $$ r_2 $$ occurs $$ n_2 $$ times[^3], fo
 <center>$$ \left\langle r \right\rangle_\tau = \lim_{T\to\infty}\left(\dfrac{x(t+T\delta t)}{x(t)}\right)^{\frac{1}{T}} = \lim_{T\to\infty} r_{1}^{n_1/T}r_{2}^{n_2/T} = r_{1}^{p}r_{2}^{1-p}$$ </center>
 Here, $$ p = \lim_{T\to\infty} \frac{n_1}{T} $$. In our particular example, the time average is $$ 1 $$ which indicates that over time, the process does not add any money.
 
-Hopefully, this clarifies that the ensemble average and time average are different pieces of information about the same process or system. The difference between the two averages become key in the study of Brownian motion and some interpretations of Itô calculus. To model human decision making, the rate of change of expectation values of money or wealth $$ \frac{\delta m}{\delta t} $$ have been known to be woefully inadequate since early 1700s[^4]. 
+Hopefully, this clarifies that the ensemble average and time average are different pieces of information about the same process or system. The difference between the two averages become key in the study of Brownian motion and some interpretations of Itô calculus. Its relevance becomes clearer when the dynamics of inequality are investigated. To model human decision making, the rate of change of expectation values of money or wealth $$ \frac{\delta m}{\delta t} $$ have been known to be woefully inadequate since early 1700s[^4]. 
 
 The explanation given was that different people treat equal amounts of extra money differently. To fix this, it was proposed that humans tend to look at the rate of change of the expectation value of a "utility" function $$ \frac{\delta u}{\delta t} $$[^5]. The utility function $$ u $$ maps the wealth or money to what, uh, utility the person has for that amount of money. Clearly, this can change from person to person.
 
@@ -46,9 +46,13 @@ Together, they are expected to model human behavior in a scenario.
 
 _Narrator_: Here's a function that tells you how you work.<br/>_Me_: I'm a complex being. No function can capture why I.. uh this seems to be a better way to live life.<br/>_Also me after 5 minutes_: Wait, I don't know myself at all.
 
-Existential nightmares aside, the resolutions proposed to the questions that arise from results of utility theory feel either unnatural or reminiscent of pesky "exceptions" in chemistry. At this point, there are two issues that stick out:
-1. Ensemble averages without ergodicity are shady in this context. Even if they're ergodic, observed data and the subsequent analysis on it gives a time average (and not a $$ T\to\infty $$ average). Even in statistical physics, there are cases of symmetry breaking that potentially lead to the breakdown of ergodicity over different time scales.
+Existential nightmares aside, the resolutions proposed to the questions that arise from results of utility theory feel either unnatural or reminiscent of pesky "exceptions" in chemistry. At this point, there are three issues that stick out:
+1. Ensemble averages without ergodicity are shady in this context. Even if they're ergodic, observed data and the subsequent analysis on it gives a time average (and not a $$ T\to\infty $$ average). In statistical physics, there are cases of symmetry breaking that potentially lead to the breakdown of ergodicity over different time scales. Over shorter time scales, the ergodic results in these cases are expected to hold.
 2. There's a good chance that human behavior optimizes something other than utility.
+3. The averages are computed at infinite or large limits. However, the averages from observations are computed on a finite population over finite time.
+
+So far, this discussion has only talked about one person going through one process. 
+
 
 [^1]: This implicitly introduces the frequency of occurence or a temporal aspect of X taking a value.
 [^2]: "Zooming out" of the curve enough for one process to filter out the noise and get the trend.
