@@ -39,6 +39,7 @@ Hopefully, this clarifies that the ensemble average and time average are differe
 I have my qualms with expected utility theory - never got around to understanding it entirely. Utility theory makes the assumption that humans optimize the ensemble average of the utility. In these models, there are two key components
 * dynamic - describes wealth growth; could be additive or multiplicative.
 * utility - ideally mirrors the importance given to an attribute like wealth in human decision making.
+
 Together, they are expected to model human behavior in a scenario.
 
 [^1]: This implicitly introduces the frequency of occurence or a temporal aspect of X taking a value.
