@@ -42,7 +42,15 @@ I have my qualms with expected utility theory - never got around to understandin
 * dynamic - describes wealth growth; could be additive or multiplicative.
 * utility - ideally mirrors the importance given to an attribute like wealth in human decision making.
 
-Together, they are expected to model human behavior in a scenario.
+Together, they are expected to model human behavior in a scenario. 
+
+_Narrator_: Here's a function that tells you how you work. 
+_Me_: I'm a complex being. No function can capture why I.. uh this seems to be a better way to live life.
+_Also me after 5 minutes_: Wait, I don't know myself at all.
+
+Existential nightmares aside, the resolutions proposed to the questions that arise from results of utility theory feel either unnatural or reminiscent of pesky "exceptions" in chemistry. At this point, there are two issues that stick out:
+1. Ensemble averages without ergodicity are shady. Even if they're ergodic, observed data and the subsequent analysis on it gives a time average (and not a $$ T\to\infty $$ average). Even in statistical physics, there are cases of symmetry breaking that potentially lead to the breakdown of ergodicity over different time scales.
+2. There's a good chance that human behavior results in optimizing something other than utility.
 
 [^1]: This implicitly introduces the frequency of occurence or a temporal aspect of X taking a value.
 [^2]: "Zooming out" of the curve enough for one process to filter out the noise and get the trend.
