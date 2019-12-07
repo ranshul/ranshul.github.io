@@ -34,8 +34,15 @@ If $$ r_1 $$ occurs $$ n_1 $$ times and $$ r_2 $$ occurs $$ n_2 $$ times[^3], fo
 <center>$$ \left\langle r \right\rangle_\tau = \lim_{T\to\infty}\left(\dfrac{x(t+T\delta t)}{x(t)}\right)^{\frac{1}{T}} = \lim_{T\to\infty} r_{1}^{n_1/T}r_{2}^{n_2/T} = r_{1}^{p}r_{2}^{1-p}$$ </center>
 Here, $$ p = \lim_{T\to\infty} \frac{n_1}{T} $$. In our particular example, the time average is $$ 1 $$ which indicates that over time, the process does not add any money.
 
-Hopefully, this clarifies that the ensemble average and time average are different pieces of information about the same process or system.
+Hopefully, this clarifies that the ensemble average and time average are different pieces of information about the same process or system. The difference between the two averages become key in the study of Brownian motion and some interpretations of Itô calculus. To model human decision making, the expectation values of money or wealth have been known to be woefully inadequate since early 1700s[^4]. Instead, it was proposed that humans tend to look at the rate of change of the expected value of a "utility" function[^5]. 
+
+I have my qualms with expected utility theory - never got around to understanding it all the way. In these models, there are two key components
+* dynamic - describes wealth growth; could be additive or multiplicative.
+* utility - ideally mirrors the importance given to an attribute by human decision making.
+These two together are expected to predict human behavior. 
 
 [^1]: This implicitly introduces the frequency of occurence or a temporal aspect of X taking a value.
 [^2]: "Zooming out" of the curve enough for one process to filter out the noise and get the trend.
 [^3]: Here, $$ n_1 + n_2 = T $$
+[^4]: Bernoulli's correspondences, Montmort for this case, are interesting in general.
+[^5]: Expected wealth vs expected utility models.
